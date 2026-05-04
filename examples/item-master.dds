@@ -1,0 +1,10 @@
+A          R ITEMMAST                   WINDOW(15 30)
+A* Item Master Maintenance Screen
+A            ITEMNO        6S 0B  5  5CHECK(01 02)
+A            ITEMNO_H     15A  O  5 12
+A            DESC         30A  B  7  5
+A            UNIT         10A  B  8  5VALUES('EA CT BOX BAG')
+A            PRICE        11S 2B  9  5RANGE(0 99999.99)
+A            TAXABLE       1A  B 10  5VALUES('Y N')
+A  23                                   CF03(12 'Cancel')
+A  12                                   CF12(12 'Exit')

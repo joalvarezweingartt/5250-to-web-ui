@@ -1,0 +1,18 @@
+A          R CUSTOMER                   WINDOW(10 20)
+A* Customer Inquiry Screen
+A            CUSNO         5A  B  7  2CHECK(01)
+A            CUSNO_H      10A  O  7  2
+A            NAME         30A  O  8  2
+A            ADDR1        30A  O  9  2
+A            CITY         20A  O 10  2
+A            STATE         2A  O 10 23
+A            ZIP          10A  O 10 26
+A          R CUSTOMERL                  SFL
+A            CUSNO         5A  B  2  2
+A            NAME         30A  O  2  8
+A            BALANCE       7S 2O  2 40EDTCDR(2)
+A          R CUSTCTL                    SFLCTL(CUSTOMERL)
+A            SFLPAG(0012)
+A            SFLSIZ(0012)
+A  23                                   CF03(12 'Cancel')
+A  12                                   CF12(12 'Search')
